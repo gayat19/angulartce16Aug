@@ -1,0 +1,10 @@
+Component -
+     HTML
+     CSS
+    TS
+    Spec
+
+Service
+    Communication between components
+    GET/PUT/POST/DELETE - HTTP verbs ->API
+    CRUD

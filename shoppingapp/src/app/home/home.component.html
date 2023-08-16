@@ -1,0 +1,13 @@
+<div>
+    <!-- interpollation -->
+   {{name}}
+   {{10+20}}
+   {{30>20?"Good":"Bad"}}
+   <!-- Property Binding -->
+   <input  type="text" [value]="name" #cname/>
+   <i [class]="apclass" (click)="toggleClass()"></i>
+</div>
+<div class="alert alert-primary">
+    Done
+    <button class="btn btn-primary" (click)="sendMessage(cname)">Click for message</button>
+</div>
