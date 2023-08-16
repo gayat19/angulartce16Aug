@@ -11,3 +11,8 @@
     Done
     <button class="btn btn-primary" (click)="sendMessage(cname)">Click for message</button>
 </div>
+<input type="text" 
+        [value]="name" 
+        #customername 
+        (change)="changeName(customername.value)"/>
+<input type="text"  [(ngModel)]="name"/>

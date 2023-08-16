@@ -1,0 +1,7 @@
+Create a new angular application - InternManagement
+Create a new component that will take the following details from user
+Intern Name, Age, Phone, DateOfBirth, Email and LikeForPanda(boolean)
+Add these details to the intern array which you have in the component when the user hits submit button
+At the top display the total number of interns who love pandas
+
+

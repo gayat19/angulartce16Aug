@@ -8,3 +8,9 @@ Service
     Communication between components
     GET/PUT/POST/DELETE - HTTP verbs ->API
     CRUD
+
+Data binding 
+    Interpollation 
+    Property Binding
+    Event Binding
+    Local Handles

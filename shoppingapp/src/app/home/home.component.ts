@@ -30,6 +30,10 @@ export class HomeComponent implements OnInit {
     this.classCheck = !this.classCheck;
 
    }
+   changeName(cname:string){
+    alert(cname);
+    this.name = cname;
+   }
   ngOnInit(): void {
   }
 
