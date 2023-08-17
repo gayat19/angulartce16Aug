@@ -14,3 +14,252 @@ Data binding
     Property Binding
     Event Binding
     Local Handles
+
+
+ https://github.com/gayat19/angulartce16Aug.git
+
+
+
+ng serve
+
+npm i bootstrap --save
+
+
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-home',
+  templateUrl: './home.component.html',
+  // template:"<div>Hello</div>",
+  styleUrls: ['./home.component.css']
+})
+  export class HomeComponent implements OnInit {
+
+    name:string;
+    constructor() {
+      this.name = "Ramu";
+     }
+
+    ngOnInit(): void {
+    }
+
+  }
+-----------------------------
+
+<div>
+    <!-- interpollation -->
+   {{name}}
+   {{10+20}}
+   {{30>20?"Good":"Bad"}}
+</div>
+
+
+-----------------------------
+
+npm i bootstrap-icons
+
+-----------------------
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+
+-----------------------	--------
+<div>
+    <!-- interpollation -->
+   {{name}}
+   {{10+20}}
+   {{30>20?"Good":"Bad"}}
+   <!-- Property Binding -->
+   <input  type="text" [value]="name"/>
+   <i class="bi bi-airplane-fill"></i>
+</div>
+<div class="alert alert-primary">
+    Done
+    <button class="btn btn-primary" (click)="sendMessage()">Click for message</button>
+</div>
+-------------------------------
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-home',
+  templateUrl: './home.component.html',
+  // template:"<div>Hello</div>",
+  styleUrls: ['./home.component.css']
+})
+export class HomeComponent implements OnInit {
+
+  name:string;
+  constructor() {
+    this.name = "Ramu";
+   }
+   sendMessage(){
+    alert("Hello")
+   }
+  ngOnInit(): void {
+  }
+
+}
+---------------------------------------------------
+<div>
+    <!-- interpollation -->
+   {{name}}
+   {{10+20}}
+   {{30>20?"Good":"Bad"}}
+   <!-- Property Binding -->
+   <input  type="text" [value]="name" #cname/>
+   <i class="bi bi-airplane-fill"></i>
+</div>
+<div class="alert alert-primary">
+    Done
+    <button class="btn btn-primary" (click)="sendMessage(cname)">Click for message</button>
+</div>
+---------------------------------------------
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-home',
+  templateUrl: './home.component.html',
+  // template:"<div>Hello</div>",
+  styleUrls: ['./home.component.css']
+})
+export class HomeComponent implements OnInit {
+
+  name:string;
+  constructor() {
+    this.name = "Ramu";
+   }
+   sendMessage(cname:any){
+    console.log(cname.value)
+   }
+  ngOnInit(): void {
+  }
+
+}
+----------------------------------------------
+<div>
+    <!-- interpollation -->
+   {{name}}
+   {{10+20}}
+   {{30>20?"Good":"Bad"}}
+   <!-- Property Binding -->
+   <input  type="text" [value]="name" #cname/>
+   <i [class]="apclass" (click)="toggleClass()"></i>
+</div>
+<div class="alert alert-primary">
+    Done
+    <button class="btn btn-primary" (click)="sendMessage(cname)">Click for message</button>
+</div>
+----------------------------------------------
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-home',
+  templateUrl: './home.component.html',
+  // template:"<div>Hello</div>",
+  styleUrls: ['./home.component.css']
+})
+export class HomeComponent implements OnInit {
+
+  name:string;
+  apclass:string;
+  classCheck:boolean;
+  constructor() {
+    this.name = "Ramu";
+    this.apclass="bi bi-airplane";
+    this.classCheck = false;
+   }
+   sendMessage(cname:any){
+    console.log(cname.value)
+   }
+   toggleClass(){
+    if(this.classCheck)
+    {
+      this.apclass="bi bi-airplane";
+    }
+    els
+      this.apclass="bi bi-airplane-fill";
+
+    this.classCheck = !this.classCheck;
+
+   }
+  ngOnInit(): void {
+  }
+
+}
+--------------------------------------
+<div>
+    <!-- interpollation -->
+   {{name}}
+   {{10+20}}
+   {{30>20?"Good":"Bad"}}
+   <!-- Property Binding -->
+   <input  type="text" [value]="name" #cname/>
+   <i [class]="apclass" (click)="toggleClass()"></i>
+</div>
+<div class="alert alert-primary">
+    Done
+    <button class="btn btn-primary" (click)="sendMessage(cname)">Click for message</button>
+</div>
+<input type="text" 
+        [value]="name" 
+        #customername 
+        (change)="changeName(customername.value)"/>
+<input type="text"  [(ngModel)]="name"/>
+
+-----------------------------------------
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-home',
+  templateUrl: './home.component.html',
+  // template:"<div>Hello</div>",
+  styleUrls: ['./home.component.css']
+})
+export class HomeComponent implements OnInit {
+
+  name:string;
+  apclass:string;
+  classCheck:boolean;
+  constructor() {
+    this.name = "Ramu";
+    this.apclass="bi bi-airplane";
+    this.classCheck = false;
+   }
+   sendMessage(cname:any){
+    console.log(cname.value)
+   }
+   toggleClass(){
+    if(this.classCheck)
+    {
+      this.apclass="bi bi-airplane";
+    }
+    else
+      this.apclass="bi bi-airplane-fill";
+
+    this.classCheck = !this.classCheck;
+
+   }
+   changeName(cname:string){
+    alert(cname);
+    this.name = cname;
+   }
+  ngOnInit(): void {
+  }
+
+}
+-------------------------------------------------
+Create a new angular application - InternManagement
+Create a new component that will take the following details from user
+Intern Name, Age, Phone, DateOfBirth, Email and LikeForPanda(boolean)
+Add these details to the intern array which you have in the component when the user hits submit button
+At the top display the total number of interns who love pandas
+----------------------------------------------------
+this.products = [{name:"Pencil",price:23,quanity:5},
+    {name:"Pencil",price:23,quanity:5}];
+
+
+
+
+
+
+	

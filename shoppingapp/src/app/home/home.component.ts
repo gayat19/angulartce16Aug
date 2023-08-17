@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-
+products:any
   name:string;
   apclass:string;
   classCheck:boolean;
@@ -15,6 +15,8 @@ export class HomeComponent implements OnInit {
     this.name = "Ramu";
     this.apclass="bi bi-airplane";
     this.classCheck = false;
+    this.products = [{name:"Pencil",price:23,quanity:5},
+    {name:"Pencil",price:23,quanity:5}];
    }
    sendMessage(cname:any){
     console.log(cname.value)

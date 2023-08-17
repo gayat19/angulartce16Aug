@@ -1,0 +1,24 @@
+
+<div class="div">
+
+<div *ngIf="product.quantity>0 else nostock" class="alert alert-primary">
+    <img [src]="product.pic" alt="no image">
+    <br>
+    Product Id:{{product.id}}
+    <br/>
+    Product Name:{{product.name | uppercase}}
+    <br/>
+    Product Price:{{product.price | currency:'INR'}}
+    <br/>
+    Product Quantity:{{product.quantity | number:'2.2'}}
+    <br/>
+    <button [disabled]="product.quantity==0" class="btn btn-primary">But @ {{product.price | currency:'INR'}} </button>
+    
+</div>
+<ng-template #nostock>
+    <p  class="alert alert-danger">Out of stock</p>
+</ng-template>
+</div>
+<div *ngFor="let num of numbers">
+    {{num}}
+</div>
