@@ -1,3 +1,6 @@
 <div *ngFor="let product of products">
-    <app-product class="productdiv" [product]="product"></app-product>
+    <app-product class="productdiv" [product]="product" (buyProduct)="showTotal($event)"></app-product>
+</div>
+<div>
+    Total numbers : {{count}}
 </div>

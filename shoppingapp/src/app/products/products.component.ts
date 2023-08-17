@@ -1,13 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { Product } from '../models/product';
 
+
 @Component({
   selector: 'app-products',
   templateUrl: './products.component.html',
   styleUrls: ['./products.component.css']
 })
 export class ProductsComponent implements OnInit {
-
+  count:number=0;
   products:Product[];
   constructor() { 
     this.products = [
@@ -16,7 +17,9 @@ export class ProductsComponent implements OnInit {
       new  Product(103,"Eraser",7,10,"./assets/images/Pencil.jpeg")
     ];
   }
-
+  showTotal(event:number){
+    this.count += event;
+  }
   ngOnInit(): void {
   }
 
