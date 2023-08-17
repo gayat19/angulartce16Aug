@@ -1,0 +1,10 @@
+<div class="alert alert-warning" >
+        <table>
+            <tr *ngFor="let prod of cartProducts">
+                <td>{{prod.name}}</td>
+                <td>{{prod.price}}</td>
+                <td>{{prod.quantity}}</td>
+                <td>{{prod.price *prod.quantity}}</td>
+            </tr>
+        </table>
+</div>

@@ -8,6 +8,8 @@ import { MenuComponent } from './menu/menu.component';
 import { FormsModule } from '@angular/forms';
 import { ProductComponent } from './product/product.component';
 import { ProductsComponent } from './products/products.component';
+import { CartService } from './services/cart.service';
+import { CartComponent } from './cart/cart.component';
 
 
 @NgModule({
@@ -16,14 +18,15 @@ import { ProductsComponent } from './products/products.component';
     HomeComponent,
     MenuComponent,
     ProductComponent,
-    ProductsComponent
+    ProductsComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [CartService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
