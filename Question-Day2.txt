@@ -1,0 +1,4 @@
+In the application you created yesterday
+* Create component for taking the intern details(id,name,age,date of birth) and pushing in to colletion
+* Use a service to maintain the list of interns
+* Create a "Inters" and  a "Inter" component to list the inter details
