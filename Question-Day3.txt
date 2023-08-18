@@ -1,0 +1,20 @@
+https://www.weatherapi.com
+
+You the above site sign up and get the key
+
+Once you have the key make a get request and check the data
+
+-------------------------------
+
+https://pixabay.com/api/docs/
+You the above site sign up and get the key
+
+Once you have the key make a get request and check the data
+----------------------------------------------
+
+Create an angular application that will show options to get weather or show pics in menu
+
+Based on the menu click show the repective compoenets
+The components should fetch data from the respective APIs
+Ensure you have the proper models and services
+

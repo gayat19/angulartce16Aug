@@ -1,0 +1,12 @@
+Routing
+   Link - > RouterLink
+   MAp - word for route -> Component
+   Place holder -> Router-outlet
+   Routing Parameters
+
+
+author,content,description,title,urlToImage
+
+
+Http CLient - Get
+
